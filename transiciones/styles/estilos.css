@@ -1,0 +1,19 @@
+.pelota{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    /*propiedad de transicion simple*/
+    /*transition-property: width; */ /*--> la que va a hacer*/
+    /*transition-duration: 1s; */ /*--> cuanto durará*/
+    /*transition-delay: 1s; */ /*--> tiempo a esperar para la recacion*/
+    /*transition-timing-function: ease ; *//*-->funcion de aceleración*/
+    /*transeition-> funcion/duracion/delay/timming-function*/
+    transition: width 1s ease;
+}
+
+.pelota:hover{
+    width: 200px;
+    height: 200px;
+}
+
