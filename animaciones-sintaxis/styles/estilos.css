@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+}
+.container{
+    border: 1px solid red;
+    width: 100%;
+    
+}
+@keyframes cuadrado {
+    /*dentro se coloca o que va a hacer la animación en el tiempo que ya le dimos*/
+    0%{
+        /* opacity: 1; */
+        left: 0;
+    }
+    100%{
+        /* opacity: 0; */
+        left: calc(100% - 240px);
+    }
+
+}
+
+
+.container:hover .cuadrado{
+    animation-play-state: paused;
+
+}
+.cuadrado{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background: #7dc900;
+    margin: 20px;
+   transition: .3s;
+
+   /*animaciones--> nombre y duración obligatoria*/
+   animation-name: cuadrado;
+   animation-duration: 2s;
+   /* animation-delay: 1s; */
+   /*cuantas veces re repetira la animacion*/
+    animation-iteration-count: infinite;
+   /* animation-timing-function: ease/ease-in/ease-out/ease-in-out/linear; */ 
+   animation-timing-function: ease;
+   
+   /*direccion de la animacion*/
+   animation-direction: alternate;
+   /* animation-direction: alternate; */
+
+   /*pausar, empezar la animación*/
+   /* animation-play-state: paused; */
+
+   /*forma en la se ejecutará la animación, forrwards--> una y termina*/
+   /* animation-fill-mode: forwards; */
+   position: relative;
+}
