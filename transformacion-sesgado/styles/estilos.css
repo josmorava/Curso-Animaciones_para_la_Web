@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+    /*perspectiva 3d*/
+    perspective: 200px;
+    /* perspective-origin: x,y; */
+    perspective-origin: center;
+}
+.container{
+    border: 1px solid red;
+}
+.container:hover .cuadrado{
+  /*sesgado de un elemento*/
+    /* transform: skew(x,y); */
+    transform: skew(35deg, 34deg);
+}
+.cuadrado{
+    height: 200px;
+    width: 200px;
+    background: #7dc900;
+    margin: 20px;
+   transition: .3s;
+}
