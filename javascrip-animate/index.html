@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascrip element.animte</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 600px;
+            border: 1px solid red;
+        }
+        .pelota{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pelota" id="pelota"></div>
+    </div>
+
+    <script>
+        const $pelota = document.getElementById("pelota");
+
+        $pelota.animate([
+            // from
+            {
+                transform: "translateX(0)"
+            },
+            // to
+            {
+                transform: "translateX(500px)"
+            }
+        ], {
+            // duracion de la animacion
+            duration: 1000, //= 1s
+
+            // demora en lanzar la animacion
+            delay: 1000, //=1s
+
+            // direccion de la animacion
+            direction:"normal",
+
+            // forma de la animacion
+            easing:"Linear",
+
+            // cuantas veces se ejecuta la animacion
+            interations: Infinity,
+
+            // estilos finales de la animacion
+            fill:"forwards",
+
+            // estado exacto donde se inicia la aplicacion
+            iterationStart: .5 , //=50%
+
+            // tiempo de espera entre las animaciones
+            // endDelay:
+        })
+    </script>
+
+</body>
+</html>
