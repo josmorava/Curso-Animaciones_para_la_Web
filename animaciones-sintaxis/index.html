@@ -13,5 +13,17 @@
             Hola Mundo
         </div>
     </div>
+    <script>
+        const $cuadrado = document.getElementById("cuadrado");
+        $cuadrado.addEventListener("animationend", (even) => {
+            console.log(event.animationName);
+            if (event.animationName === "rebote") {
+                $cuadrado.style.animationName = "escalera";
+                $cuadrado.style.animationDuration = '3s';
+            }
+        });
+
+        document.write('hola');
+    </script>
 </body>
 </html>

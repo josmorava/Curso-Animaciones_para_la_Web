@@ -1,6 +1,6 @@
 body{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100vh;
     color: white;
@@ -32,6 +32,14 @@ body{
     to{
         transform: translateY(100%) scale(1, .8); /*--scale( "ejex", (ejey))*/
     }
+}
+@keyframes escalera{
+    from{
+        transform: translateY(500px);
+    }
+    to{
+        transform: translateY(100px);
+    }
 } 
 
 .container:hover .cuadrado{
@@ -50,11 +58,11 @@ body{
    transition: .3s;
 
    /*animaciones--> nombre y duración obligatoria*/
-   animation-name: cuadrado, rebote;
-   animation-duration: 2s, .2s;
+   animation-name: cuadrado , /*rebote*/ rebote;
+   animation-duration: 3s, .3s;
    /* animation-delay: 1s; */
    /*cuantas veces re repetira la animacion*/
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite, 20;
 
      /* forma en la que se ejecut la animacion */
    /* animation-timing-function: ease/ease-in/ease-out/ease-in-out/linear; */ 
