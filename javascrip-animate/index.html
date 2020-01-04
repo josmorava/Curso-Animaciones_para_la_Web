@@ -22,17 +22,40 @@
             background: red;
             border-radius: 50%;
         }
+        .btn{
+            text-align: center;
+            background: #7dc800;
+            padding: .6em .8em .8em;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            box-shadow: inset 0 -.2em rgba(0,0,0, .2); 
+            outline: 0;
+            transition: .2s;
+            will-change: transform;
+        }
+        .btn:active{      /*0-1*/
+            transform: scale(.8);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="pelota" id="pelota"></div>
+        <div class="buttons">
+            <button class="btn" id="play">Play</button class="btn">
+            <button class="btn" id="pause">Pause</button class="btn">
+            <button class="btn" id="stop">Stop</button class="btn">
+            <button class="btn" id="reverse">Reverse</button>
+        </div>
     </div>
 
     <script>
         const $pelota = document.getElementById("pelota");
 
-        $pelota.animate([
+        const animation = $pelota.animate([
             // from
             {
                 transform: "translateX(0)"
@@ -55,7 +78,7 @@
             easing:"Linear",
 
             // cuantas veces se ejecuta la animacion
-            interations: Infinity,
+            iterations: Infinity,
 
             // estilos finales de la animacion
             fill:"forwards",
@@ -66,6 +89,23 @@
             // tiempo de espera entre las animaciones
             // endDelay:
         })
+        const $playButton = document.getElementById("play");
+        const $pauseButton = document.getElementById("pause");
+        const $stopButton = document.getElementById("stop");
+        const $reverseButton = document.getElementById("reverse");
+
+        $playButton.addEventListener("click", (event) =>{
+            animation.play();
+        });
+        $pauseButton.addEventListener("click", (event) =>{
+            animation.pause();
+        });
+        $stopButton.addEventListener("click", (event) =>{
+            animation.cancel();
+        });
+        $reverseButton.addEventListener("click", (event) =>{
+            animation.reverse();
+        });
     </script>
 
 </body>

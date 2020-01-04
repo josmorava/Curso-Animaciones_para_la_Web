@@ -64,7 +64,7 @@ body{
    /*cuantas veces re repetira la animacion*/
     animation-iteration-count: infinite, 20;
 
-     /* forma en la que se ejecut la animacion */
+     /* forma en la que se ejecut la animacion -- aceleracion*/
    /* animation-timing-function: ease/ease-in/ease-out/ease-in-out/linear; */ 
    /* animation-timing-function: linear; */
     /* pasos con los cuales se va a ejecutar la animacion en frames */
