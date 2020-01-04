@@ -1,0 +1,61 @@
+.container{
+    border: 1px solid green;
+    height: 600px;
+}
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 80px;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 30px;
+    position: relative;
+    animation-duration: 4s, 2.5s , 4s;
+    animation-name: movimiento , tamaño, salto;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes movimiento{
+    from{
+        left: 0;
+        
+    }
+    to{
+        left: calc(100% - 220px);
+        
+    }
+}
+@keyframes tamaño{
+    0%{
+        font-size:33px ;
+    }
+    50%{
+        font-size: 25px;
+    }
+    75%{
+        font-size: 15px;
+    }
+    100%{
+        font-size: 10px;
+    }
+}
+@keyframes salto{
+    0%{
+        margin-top: 5%;
+    }
+    25%{
+        margin-top: 60%;
+    }
+    50%{
+        margin-top: 0%;
+    }
+    75%{
+        margin-top: 60%
+    }
+    100%{
+        margin-top: 5%;
+    }
+}
