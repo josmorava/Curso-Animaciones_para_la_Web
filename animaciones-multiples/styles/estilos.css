@@ -23,16 +23,7 @@ body{
     }
 
 }
-@keyframes rebote{
-    /* 0% */
-    from{
-        transform: translateY(0);
-    }
-    /* 100% */
-    to{
-        transform: translateY(100%) scale(1, .8); /*--scale( "ejex", (ejey))*/
-    }
-} 
+ 
 
 .container:hover .cuadrado{
     animation-play-state: paused;
@@ -50,8 +41,8 @@ body{
    transition: .3s;
 
    /*animaciones--> nombre y duración obligatoria*/
-   animation-name: cuadrado, rebote;
-   animation-duration: 2s, .2s;
+   animation-name: cuadrado;
+   animation-duration: 1s;
    /* animation-delay: 1s; */
    /*cuantas veces re repetira la animacion*/
     animation-iteration-count: infinite;
@@ -61,7 +52,7 @@ body{
    /* animation-timing-function: linear; */
     /* pasos con los cuales se va a ejecutar la animacion en frames */
    /* animation-timing-function: steps(5); */
-   /* animation-timing-function: cubic-bezier(1, 1, 1, 1); ---->curva de vecier */
+   animation-timing-function: cubic-bezier(1, 1, 1, 1); /*---->curva de vecier*/
    
    /*direccion de la animacion*/
    animation-direction: alternate;
@@ -72,10 +63,6 @@ body{
 
    /*forma en la se ejecutará la animación, forrwards--> una y termina*/
    /* animation-fill-mode: forwards; */
-
-   /* --animacion para el rebote */
-    animation-timing-function: linear, ease-in-out;
-
    position: relative;
 
   
