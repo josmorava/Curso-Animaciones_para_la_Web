@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+} 
+.container{
+    border: 1px solid red;
+    width: 100%;
+    
+}
+@keyframes cuadrado {
+    /*dentro se coloca o que va a hacer la animación en el tiempo que ya le dimos*/
+    0%{
+        /* opacity: 1; */
+        left: 0;
+    }
+    100%{
+        /* opacity: 0; */
+        left: calc(100% - 240px);
+    }
+
+}
+@keyframes rebote{
+    /* 0% */
+    from{
+        transform: translateY(0);
+    }
+    /* 100% */
+    to{
+        transform: translateY(100%) scale(1, .8); /*--scale( "ejex", (ejey))*/
+    }
+}
+@keyframes escalera{
+    from{
+        transform: translateY(500px);
+    }
+    to{
+        transform: translateY(100px);
+    }
+} 
+
+.container:hover .cuadrado{
+    animation-play-state: paused;
+
+}
+.cuadrado{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background: red;
+    margin: 20px;
+   transition: .3s;
+
+   /*animaciones--> nombre y duración obligatoria*/
+   /* animation-name: cuadrado , /*rebote*/;
+   /* animation-duration: 3s, .3s; */
+   /* animation-delay: 1s; */
+   /*cuantas veces re repetira la animacion*/
+    animation-iteration-count: infinite, 20;
+
+     /* forma en la que se ejecut la animacion */
+   /* animation-timing-function: ease/ease-in/ease-out/ease-in-out/linear; */ 
+   /* animation-timing-function: linear; */
+    /* pasos con los cuales se va a ejecutar la animacion en frames */
+   /* animation-timing-function: steps(5); */
+   /* animation-timing-function: cubic-bezier(1, 1, 1, 1); ---->curva de vecier */
+   
+   /*direccion de la animacion*/
+   animation-direction: alternate;
+   /* animation-direction: alternate; */
+
+   /*pausar, empezar la animación*/
+   /* animation-play-state: paused; */
+
+   /*forma en la se ejecutará la animación, forrwards--> una y termina*/
+   /* animation-fill-mode: forwards; */
+
+   /* --animacion para el rebote */
+    animation-timing-function: linear, ease-in-out;
+    transition: 2s;
+
+    /* se le avisa al navegador cuando/ como va a realizar el cambio --> sirve para optimizar*/
+    will-change: opacity,transform ;
+
+
+   position: relative;
+}
+.cuadrado:hover{
+    opacity: 0;
+    transform: scale(1.1);
+}
