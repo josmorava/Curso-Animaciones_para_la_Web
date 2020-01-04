@@ -23,7 +23,7 @@ body{
     }
 
 }
-
+ 
 
 .container:hover .cuadrado{
     animation-play-state: paused;
@@ -42,12 +42,17 @@ body{
 
    /*animaciones--> nombre y duración obligatoria*/
    animation-name: cuadrado;
-   animation-duration: 2s;
+   animation-duration: 1s;
    /* animation-delay: 1s; */
    /*cuantas veces re repetira la animacion*/
     animation-iteration-count: infinite;
+
+     /* forma en la que se ejecut la animacion */
    /* animation-timing-function: ease/ease-in/ease-out/ease-in-out/linear; */ 
-   animation-timing-function: ease;
+   /* animation-timing-function: linear; */
+    /* pasos con los cuales se va a ejecutar la animacion en frames */
+   /* animation-timing-function: steps(5); */
+   animation-timing-function: cubic-bezier(1, 1, 1, 1); /*---->curva de vecier*/
    
    /*direccion de la animacion*/
    animation-direction: alternate;
@@ -59,4 +64,7 @@ body{
    /*forma en la se ejecutará la animación, forrwards--> una y termina*/
    /* animation-fill-mode: forwards; */
    position: relative;
+
+  
+  
 }
